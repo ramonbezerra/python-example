@@ -1,0 +1,31 @@
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.log
+*.pid
+*.pid.lock
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*.cache
+*.DS_Store
+*.vscode
+# Ignore Python bytecode files
+**/__pycache__/
+# Ignore Python compiled files
+*.pyc
+*.pyo
+*.pyd
+# Ignore Python egg files
+*.egg
+# Ignore Python distribution files
+*.egg-info/
+# Ignore Django migrations
+**/migrations/
+# Ignore Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+# Ignore virtual environment directories
+.venv/

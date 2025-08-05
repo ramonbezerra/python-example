@@ -21,5 +21,5 @@ from school.views import courses_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('courses/', courses_list, name='courses_list'),
 ]
