@@ -4,8 +4,8 @@ from .views import courses_list, course_detail
 appname = 'school'
 
 urls = [
-    path('', courses_list, name='courses_list'),
-    path('<int:pk>', course_detail, name='course_detail'),
+    path('courses/', courses_list, name='courses_list'),
+    path('courses/<int:pk>', course_detail, name='course_detail'),
 ]
 
 school_patterns = (urls, appname)
