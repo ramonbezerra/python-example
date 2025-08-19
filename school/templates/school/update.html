@@ -5,9 +5,10 @@
 {% block content %}
 <h1 class="text-2xl font-bold mb-4">School - Course Update - {{ course.name }}</h1>
 
-<form method="post">
+<form class="mb-4" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update</button>
+    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Update</button>
 </form>
+<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded" href="{% url 'school:course_detail' course.pk %}">Cancel</a>
 {% endblock %}
