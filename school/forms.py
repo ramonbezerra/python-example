@@ -1,6 +1,12 @@
 from django import forms
 
-class CourseForm(forms.Form):
+from school.models import Course
+
+class CourseForm(forms.ModelForm):
+    class Meta: 
+        model = Course
+        fields = ['name', 'description']
+
     name = forms.CharField(max_length=50)
     description = forms.CharField(widget=forms.Textarea)
 
