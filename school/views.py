@@ -34,3 +34,10 @@ def course_update(request, pk):
             return redirect('school:courses_list')
     else:
         return render(request, 'school/update.html', {'form': form, 'course': course })
+    
+def course_delete(request, pk):
+    course = get_object_or_404(Course, pk=pk)
+    if request.method == 'POST':
+        course.delete()
+        return redirect('school:courses_list')
+    return render(request, 'school/delete.html', {'course': course})
